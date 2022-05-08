@@ -1,12 +1,12 @@
 import json
 from discord import Intents
 
-def jload(file, mode='r', *args, **kwargs):
+def load_json_file(file, mode='r', *args, **kwargs):
     file = file if file[-5:] == '.json' else file + '.json'
     with open(file, mode, *args, **kwargs) as file:
         return json.load(file)
 
-def getIntents(items):
+def get_intents(items):
     _map = {'all': Intents.all(), 'default': Intents.default(), 'none': Intents.none()}
     intents = _map.get(items[0])
     if len(items) == 1:
