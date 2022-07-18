@@ -8,7 +8,7 @@ import dotenv
 dotenv.load_dotenv()
     
 class MyBot(commands.Bot):
-    def __init__(self, command_prefix="mb.", intents=discord.Intents.all()) -> None:
+    def __init__(self, command_prefix="!", intents=discord.Intents.all()) -> None:
         super().__init__(command_prefix=command_prefix, intents=intents)
         self._add_command()
 
